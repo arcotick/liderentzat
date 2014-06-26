@@ -1,22 +1,50 @@
-html, body {
+* {
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 }
-#ball {
+html, body {
+	font-family: sans-serif;
+}
+#card {
+	color: red;
+	cursor: all-scroll;
+	position: relative;
+	left: 600px;
+	top: 200px;
+	width: 240px;
+	height: 339px;
+	background-color: white;
+	border-radius: 12px;
+	box-shadow: 0 3px 10px 0 rgba(0,0,0,.3);
+	opacity: 0;
+	-webkit-transform: rotate(37deg);
+}
+#card::before {
+	padding: 10px;
+	font-size: 40px;
+	display: block;
+	content: "5";
+}
+#card::after {
+	padding: 10px;
+	font-size: 40px;
+	display: block;
+	position: relative;
+	top: 207px;
+	content: "5";
+	-webkit-transform: rotate(180deg);
+}
+#rhombus {
 	position: absolute;
-	background-color: black;
-	border-radius: 100%;
+	background-color: red;
+	-webkit-transform: scale(.7,1) rotate(45deg);
+	pointer-events: none;
 }
-#wallTop, #wallBottom {
-	position: absolute;
-	z-index: 1;
-	height: 100%;
-	width: 25px;
-	left: -13px;
-	background-color: black;
+#rhombus.little {
+	width: 20px;
+	height: 20px;
 }
-#time {
-	color: white;
-	text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+#rhombus.big {
+	width: 40px;
+	height: 40px;
 }
