@@ -13,6 +13,7 @@ var drag = function(e) {
 var move = function(e) {
 	if (dragging) {
 		getMousePos(e);
+		console.log(mouseX-offsetx, mouseY-offsety);
 	}
 }
 var fix = function(e) {
